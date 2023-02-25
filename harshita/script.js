@@ -6,8 +6,14 @@ var imgHeight = 170; // height of images (unit: px)
 
 // Link of background music - set 'null' if you dont want to play background music
 // var bgMusicURL =
-  "https://api.soundcloud.com/tracks/143041228/stream?client_id=587aa2d384f7333a886010d5f52f302a";
+("https://api.soundcloud.com/tracks/143041228/stream?client_id=587aa2d384f7333a886010d5f52f302a");
 var bgMusicControls = true; // Show UI music control
+
+function playNow() {
+  btn.style.display = "none";
+  document.getElementById("drag-container").style.display = "block";
+  document.getElementById("playAudio").play();
+}
 
 // ===================== start =======================
 // animation start after 1000 miliseconds
@@ -76,7 +82,7 @@ if (autoRotate) {
 //   document.getElementById("music-container").innerHTML += `
 // <audio src="${bgMusicURL}" ${
 //     bgMusicControls ? "controls" : ""
-//   } autoplay loop>    
+//   } autoplay=true loop>
 // <p>If you are reading this, it is because your browser does not support the audio element.</p>
 // </audio>
 // `;

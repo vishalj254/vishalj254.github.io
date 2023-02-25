@@ -7,9 +7,29 @@
   </head>
   <body>
     <!-- partial:index.partial.html -->
-    <div id="drag-container">
+    <button
+      id="btn"
+      style="
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 40px;
+        width: 200px;
+      "
+      onclick="playNow()"
+    >
+      Play now
+    </button>
+
+    <div id="drag-container" style="display: none">
       <div id="spin-container">
         <img src="images/DSC00087.jpg" alt="" loading="lazy" />
+        <video autoplay muted loop>
+          <source src="images/1.mp4" type="video/mp4" />
+        </video>
         <video autoplay="autoplay" muted loop>
           <source src="images/3.mp4" type="video/mp4" />
         </video>
@@ -26,9 +46,7 @@
           <source src="images/2.mp4" type="video/mp4" />
         </video>
         <!-- Example add video  -->
-        <video autoplay loop controls>
-          <source src="images/1.mp4" type="video/mp4" />
-        </video>
+
         <!-- <img src="https://iili.io/HTjHAEx.jpg" alt=""> -->
         <!-- Text at center of ground -->
         <p>I Love You ❤️</p>
@@ -38,7 +56,10 @@
 
     <!-- <div id="music-container"></div> -->
 
-    <!-- github corner (https://github.com/tholman/github-corners) -->
+    <audio autoplay loop id="playAudio">
+      <source src="images/ReelAudio-24405.mp3" />
+    </audio>
+
     <style>
       .github-corner:hover .octo-arm {
         animation: octocat-wave 560ms ease-in-out;
